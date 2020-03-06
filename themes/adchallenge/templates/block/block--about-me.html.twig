@@ -1,0 +1,24 @@
+{%
+  set classes = [
+  'block',
+  'block-' ~ configuration.provider|clean_class,
+  'block-' ~ plugin_id|clean_class,
+  'agiledrop-content-full-about-me'
+]
+%}
+
+<div{{ attributes.addClass(classes) }}>
+  <div class="container" id="challenge-about-me">
+    <div class="content-left">
+      {% if label %}
+        <h2{{ title_attributes }}>{{ label }}</h2>
+      {% endif %}
+      {% block content %}
+        {{ content.body }}
+    </div>
+    <div class="img-right">
+      {{ content.field_image }}
+      {% endblock %}
+    </div>
+  </div>
+</div>

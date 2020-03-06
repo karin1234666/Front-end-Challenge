@@ -1,0 +1,66 @@
+@import "./typography"; 
+@import "./colors";
+@import "./mixins";  
+
+#block-about-me{
+    background-color: $black;
+
+    #challenge-about-me{
+        @include displBlock;
+        @include displFlex;
+        @include conteiner-rac;
+
+        padding-top: 250px;
+        padding-bottom: 170px;
+
+        @media (min-width: 320px) and (max-width: 1024px){
+            padding-top: 50px;
+        }
+    }
+    .content-left{
+        @media (min-width: 992px) and (max-width: 1800px) {
+            padding-right: 5em;
+        }
+        @media (min-width: 1801px) {
+            padding-right: 5em;
+        }
+        z-index: 102;
+    }
+
+    @include imgWidth;
+    @include h2Border;
+
+    .img-right{
+        z-index: 100;
+    }
+
+    .square1{
+        width: 150px;
+        height: 150px;
+        background-color: #1D1524;;
+        position: absolute;
+        z-index: -12;
+        margin-top: -5em;
+        margin-left: 28em;
+        transform: rotate(-45deg);
+    }
+
+    .square2{
+        width: 330px;
+        height: 330px;
+        background-color: #0F2123;
+        position: absolute;
+        z-index: -12;
+        margin-top: -36em;
+        margin-left: -8em;
+    }
+
+    @media (min-width: 320px) and (max-width: 1024px){
+        .square1,
+        .square2{
+            display: none;
+        }
+    }
+
+    @include conteiner-tel;
+}

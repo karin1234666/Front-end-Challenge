@@ -1,0 +1,39 @@
+@import "./typography";  
+@import "./colors"; 
+@import "./mixins"; 
+
+footer{
+    @include cont-padd-footer;
+    ul.menu{
+        @include displFlex;
+        @include displFlex-tel;
+        padding: 30px;
+        margin: 0;
+    }
+    #block-footer{
+        background-color: $zelena;
+    }
+    .menu-item a{
+        color: $mediumgray;
+        padding: 20px;
+        text-decoration: none;
+    }
+    @media (min-width: 320px) and (max-width: 768px){
+        .menu-item a{
+            padding: 15px;
+        }
+    }
+    div#block-footercreated {
+        background: $darkblue;
+        @include displFlex;
+        @include displFlex-tel;
+
+    }
+    div#block-footercreated p {
+        margin: 0;
+        padding: 20px;
+    }
+    a{
+        color: $lightgray;
+    }
+}

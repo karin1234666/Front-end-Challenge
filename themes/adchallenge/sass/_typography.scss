@@ -1,0 +1,54 @@
+@import "./colors"; 
+@import "./mixins";
+
+
+$primaryFont: 'Roboto', sans-serif;
+
+h1{
+    font-family: $primaryFont;
+    font-weight: 100;
+    font-size: 64px;
+    line-height: 75px;
+    color: $white;
+    text-transform: capitalize;
+    display: flex;
+}
+
+h2{
+    font-family: $primaryFont;
+    font-weight: 300;
+    font-size: 36px;
+    line-height: 42px;
+    text-transform: uppercase;
+    color: $white;
+    @include margTopRac;
+    @include margTopTel;
+}
+
+h2 a{
+    font-family: $primaryFont;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 28px;
+    color: $white;
+    text-transform: none;
+}
+
+
+h3{
+    font-family: $primaryFont;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 28px;
+    color: $white;
+}
+
+p{
+    font-family: $primaryFont;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 30px;
+    color: #D5D5D5;
+}
+
+

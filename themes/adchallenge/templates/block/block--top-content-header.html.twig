@@ -1,0 +1,20 @@
+{% block content %}
+{%
+  set classes = [
+  'block',
+  'block-' ~ configuration.provider|clean_class,
+  'block-' ~ plugin_id|clean_class,
+  'agiledrop-content-full-top-content-header'
+]
+%}
+
+<div{{ attributes.addClass(classes) }} style="background-image: url({{ header_background_img }});">
+  <div class="container" id="challenge-home">
+    {% if label %}
+      <h2{{ title_attributes }}>{{ label }}</h2>
+    {% endif %}
+    {{ content.body }}
+    {{ content.field_link }}
+    {% endblock %}
+  </div>
+</div>

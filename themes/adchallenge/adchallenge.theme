@@ -1,0 +1,16 @@
+<?php
+
+use Drupal\Core\Url;
+use Drupal\image\Entity\ImageStyle;
+use Drupal\media\MediaInterface;
+use Drupal\file\Entity\File;
+
+function adchallenge_preprocess_block__top_content_header(&$vars) {
+  $block = $vars["elements"]["content"]["#block_content"];
+  $vars["elements"]["content"]["#block_content"]->field_image->entity;
+
+  $file = $block->field_image->entity;
+  $file_uri = $file->getFileUri();
+  $url = file_create_url($file_uri);
+  $vars['header_background_img'] = $url;
+}

@@ -1,0 +1,43 @@
+@import "./typography"; 
+@import "./colors"; 
+@import "./mixins"; 
+
+#challenge-home{
+    @include flexCenter(column);
+    h1{
+        padding-bottom: 52px;
+        line-height: 20px;
+    }
+    h2{
+        font-size: 24px;
+        line-height: 28px;
+        text-transform: none;
+        border-bottom: 1px solid rgba(255, 255, 255, .4);
+        -webkit-background-clip: padding-box; 
+        background-clip: padding-box; 
+        padding-bottom: 1.5em;
+    }
+    .site-slogan{
+        font-size: 24px;
+        line-height: 28px;
+        text-transform: capitalize;
+        color: $white;
+    }
+    a{
+        background-color: $red;
+        text-decoration: none;
+        color: $white;
+        padding: 20px 55px 18px 55px;
+        text-transform: uppercase;
+        font-size: 14px;
+        line-height: 16px;
+        border-radius: 5px;
+    }
+    a:hover{
+        background-color: transparent;
+        border: 1px solid $white;
+    }
+}
+#block-top-content-header{
+    background-size: cover;
+}

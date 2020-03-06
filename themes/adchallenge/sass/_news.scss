@@ -1,0 +1,78 @@
+@import "./typography"; 
+@import "./colors"; 
+@import "./mixins"; 
+
+#challenge-news{
+    padding-top: 150px;
+ 
+    background-color: $black;
+    a{
+        text-decoration: none;
+        color: $white;
+    }
+    .createdDate{
+        color: $mediumgray;
+        font-size: 12px;
+        line-height: 14px;
+        padding-bottom: 30px;
+        margin-top: -55px;
+    }
+    .view-content{
+       @include displFlex;
+       @include displBlock;
+       @include conteiner-rac;
+       padding-bottom: 120px;
+    }
+    h2{
+        max-width: 1050px;
+        margin: auto;
+        padding-bottom: 50px;
+    }
+
+    ul.inline li{
+        padding: 0;
+    }
+    .node-readmore{
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 16px;
+    }
+    .node__links{
+        padding-top: 25px;
+    }
+    .node-readmore::after{
+        content: " ＞";
+        color: $blue;
+    }
+    .node-readmore:hover::after{
+        color: $red;
+    }
+
+    .views-row{
+        max-width: 33%;
+    }
+
+    img{
+        width: 100%;
+        height: auto;
+    }
+
+    @media (min-width: 769px) {
+        .views-row:nth-child(2){
+            padding: 0 3%;
+        }
+    }
+
+    @media (min-width: 320px) and (max-width: 768px) {
+        .views-row{
+            max-width: 100%;
+            padding-right: 0;
+        }
+    }
+    @include h2Border;
+
+    .view-content h2::after{
+        border: none!important;
+    }
+    @include conteiner-tel;
+}

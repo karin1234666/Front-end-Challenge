@@ -1,0 +1,19 @@
+@import "./typography"; 
+@import "./colors"; 
+@import "./mixins"; 
+
+#block-latest-event{
+    background-color: $darkblue;
+
+    #challenge-event{
+        @include displBlock;
+        @include displFlex;
+        @include conteiner-rac;
+        padding-top: 120px;
+        padding-bottom: 120px;
+    }
+    @include evContent;
+    @include imgWidth;
+    @include h2Border;
+    @include conteiner-tel;
+}

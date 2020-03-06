@@ -1,0 +1,20 @@
+name: Agiledrop Challenge
+type: theme
+base theme: classy
+description: 'Theme for Agiledrop Front-end challenge, which is used by developer.'
+version: 1.0
+core: 8.x
+libraries:
+ - adchallenge/global-styling
+
+# Regions
+regions:
+  status: 'Status'
+  localised_bar: 'Localised bar'
+  header: 'Header'
+  navigation: 'Navigation'
+  precontent: 'Precontent'
+  content: 'Content'
+  sidebar: 'Sidebar'
+  footer: 'Footer'
+  copyright: 'Copyright'

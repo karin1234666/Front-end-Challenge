@@ -1,0 +1,61 @@
+@import "./typography";  
+@import "./colors"; 
+@import "./mixins"; 
+
+
+header{
+    position: fixed;
+    z-index: 9999;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.25);
+
+    @media (min-width: 769px){
+        .menu--main{
+            max-width: 50%;
+            float: right;
+            display: inline-flex;
+        }
+    }
+    
+    .region.region-header {
+        @include conteiner-rac;
+        grid-auto-flow: column;
+    }
+    ul.menu{
+        padding: 30px 0 30px 30px;
+        display: flex;
+        justify-content: center;
+    }
+    @media (min-width: 320px) and (max-width: 768px){
+        ul.menu{
+            padding: 0;
+        }
+    }
+
+    .menu-item{
+        padding-left: 40px;
+    }
+    #block-adchallenge-branding,
+    .site-slogan{
+        display: inline-flex;
+        padding: 20px 0;
+        @include displFlex-tel;
+    }
+    .site-slogan{
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 28px;
+        text-transform: capitalize;
+        color: $white;
+        padding: 20px;
+    }
+    a{
+        color: $white;
+        text-decoration: none;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 16px;
+        text-transform: uppercase;
+    }
+    @include headerBorder;
+}
